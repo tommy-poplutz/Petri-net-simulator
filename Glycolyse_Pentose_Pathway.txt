@@ -1,0 +1,29 @@
+Places:
+Glucose	0
+Adenin Triphosphat	1
+Adenin Diphosphat	0
+Glucose-6-Phosphat	0
+Fructose-6-Phosphat	0
+NADP+	2
+NADPH	0
+Ribulose-5-Phosphat	0
+oxidiertes Glutathion	1
+reduziertes Glutathion	0
+Edges:
+Source Glucose	give	Glucose	1
+Hexokinase	take	Glucose	1
+Hexokinase	take	Adenin Triphosphat	1
+Hexokinase	give	Adenin Diphosphat	1
+Hexokinase 	give	Glucose-6-Phosphat	1
+Phosphoglucoseisomerase	take	Glucose-6-Phosphat	1
+Phosphoglucoseisomerase	give 	Fructose-6-Phosphat	1
+Sink Fructose-6-Phosphat	take	Fructose-6-Phosphat	1
+Glucose-6-Phosphatdehydrogenase	take	Glucose-6-Phosphat	1
+Glucose-6-Phosphatdehydrogenase	give	Ribulose-5-Phosphat	1
+Glucose-6-Phosphatdehydrogenase	take	NADP+	2
+Glucose-6-Phosphatdehydrogenase	give	NADPH	2
+Glutathionreduktase	give	NADP+	1
+Glutathionreduktase	take	NADPH	1
+Glutathionreduktase	take	reduziertes Glutathion	2
+Glutathionreduktase	give	oxidiertes Glutathion	1
+Sink Ribulose-5-Phosphat	take	Ribulose-5-Phosphat	1
